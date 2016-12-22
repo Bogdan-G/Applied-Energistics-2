@@ -288,6 +288,7 @@ public class TileCraftingTile extends AENetworkTile implements IAEMultiBlock, IP
 					{
 						WorldCoord wc = new WorldCoord( te );
 						wc.add( d, 1 );
+						if (!this.worldObj.getChunkFromBlockCoords(wc.x, wc.z).isChunkLoaded) return;
 						if( this.worldObj.isAirBlock( wc.x, wc.y, wc.z ) )
 						{
 							places.add( wc );
@@ -318,7 +319,7 @@ public class TileCraftingTile extends AENetworkTile implements IAEMultiBlock, IP
 					WorldCoord wc = places.poll();
 					places.add( wc );
 
-					Platform.spawnDrops( this.worldObj, wc.x, wc.y, wc.z, Collections.singletonList( g.getItemStack() ) );
+					//Platform.spawnDrops( this.worldObj, wc.x, wc.y, wc.z, Collections.singletonList( g.getItemStack() ) );
 				}
 			}
 

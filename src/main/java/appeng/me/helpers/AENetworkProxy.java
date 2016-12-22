@@ -163,7 +163,10 @@ public class AENetworkProxy implements IGridBlock
 		}
 		else if( this.node != null && this.owner != null )
 		{
+			if (this.owner.getGameProfile() != null && this.owner.getGameProfile().isComplete())
+			{
 			this.node.setPlayerID( WorldSettings.getInstance().getPlayerID( this.owner.getGameProfile() ) );
+			}
 			this.owner = null;
 		}
 	}

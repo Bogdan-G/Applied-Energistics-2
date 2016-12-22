@@ -49,6 +49,7 @@ import appeng.core.sync.network.NetworkHandler;
 import appeng.core.sync.packets.PacketClick;
 import appeng.items.AEBaseItem;
 import appeng.items.contents.NetworkToolViewer;
+import appeng.items.tools.quartz.ToolQuartzWrench;
 import appeng.transformer.annotations.Integration.Interface;
 import appeng.util.Platform;
 
@@ -146,6 +147,8 @@ public class ToolNetworkTool extends AEBaseItem implements IGuiItem, IAEWrench, 
 			Block b = w.getBlock( x, y, z );
 			if( b != null && !p.isSneaking() )
 			{
+				if (ToolQuartzWrench.callBlockBreakEvent(x, y, z, w, p)) return false;
+				
 				TileEntity te = w.getTileEntity( x, y, z );
 				if( !( te instanceof IGridHost ) )
 				{
@@ -194,13 +197,13 @@ public class ToolNetworkTool extends AEBaseItem implements IGuiItem, IAEWrench, 
 	@Override
 	public boolean canWrench( ItemStack is, EntityPlayer player, int x, int y, int z )
 	{
-		return true;
+		return !ToolQuartzWrench.callBlockBreakEvent(x, y, z, player.worldObj, player);
 	}
 
 	@Override
 	public boolean canWrench( EntityPlayer player, int x, int y, int z )
 	{
-		return true;
+		return !ToolQuartzWrench.callBlockBreakEvent(x, y, z, player.worldObj, player);
 	}
 
 	@Override

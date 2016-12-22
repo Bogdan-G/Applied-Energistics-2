@@ -83,6 +83,18 @@ public class NetworkInventoryHandler<T extends IAEStack<T>> implements IMEInvent
 
 		list.add( h );
 	}
+	
+	public void removeNewStorage(final IMEInventoryHandler<T> h)
+	{
+		final int priority = h.getPriority();
+		List<IMEInventoryHandler<T>> list = this.priorityInventory.get(priority);
+		if (list != null)
+		{
+			list.remove(h);
+			if (list.isEmpty())
+				this.priorityInventory.remove(priority);
+		}
+	}
 
 	@Override
 	public T injectItems( T input, Actionable type, BaseActionSource src )

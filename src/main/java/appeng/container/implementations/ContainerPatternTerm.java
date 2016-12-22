@@ -117,6 +117,13 @@ public class ContainerPatternTerm extends ContainerMEMonitorable implements IAEA
 		this.updateOrderOfOutputSlots();
 	}
 
+	@Override
+	public void doAction(EntityPlayerMP player, appeng.helpers.InventoryAction action, int slot, long id)
+	{
+		if (action != appeng.helpers.InventoryAction.MOVE_REGION)
+			super.doAction(player, action, slot, id);
+	}
+	
 	private void updateOrderOfOutputSlots()
 	{
 		if( !this.craftingMode )

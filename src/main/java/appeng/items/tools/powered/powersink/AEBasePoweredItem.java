@@ -24,6 +24,7 @@ import com.google.common.base.Optional;
 
 public abstract class AEBasePoweredItem extends RedstoneFlux
 {
+
 	public AEBasePoweredItem( double powerCapacity, Optional<String> subName )
 	{
 		super( powerCapacity, subName );

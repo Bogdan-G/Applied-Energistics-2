@@ -193,7 +193,7 @@ public class ToolMassCannon extends AEBasePoweredItem implements IStorageCell
 				}
 				else
 				{
-					if( Platform.isServer() )
+					if( Platform.isServer() && !(p instanceof net.minecraftforge.common.util.FakePlayer) )
 					{
 						p.addChatMessage( PlayerMessages.AmmoDepleted.get() );
 					}

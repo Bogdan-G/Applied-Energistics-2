@@ -33,6 +33,8 @@ import appeng.api.networking.events.MENetworkEvent;
 import appeng.api.networking.events.MENetworkEventSubscribe;
 import appeng.core.AELog;
 
+import com.google.common.collect.Lists;
+
 
 public class NetworkEventBus
 {
@@ -113,7 +115,7 @@ public class NetworkEventBus
 						target.invoke( cache.myCache, e );
 					}
 
-					for( IGridNode obj : g.getMachines( subscriber.getKey() ) )
+					for( IGridNode obj : Lists.newArrayList( g.getMachines( subscriber.getKey() ) ) )
 					{
 						x++;
 						target.invoke( obj.getMachine(), e );

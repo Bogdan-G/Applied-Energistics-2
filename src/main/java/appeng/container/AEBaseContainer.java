@@ -499,6 +499,7 @@ public abstract class AEBaseContainer extends Container
 			if( clickSlot.isPlayerSide() )
 			{
 				tis = this.shiftStoreItem( tis );
+				clickSlot.putStack(tis != null ? tis.copy() : null);
 
 				// target slots in the container...
 				for( Object inventorySlot : this.inventorySlots )

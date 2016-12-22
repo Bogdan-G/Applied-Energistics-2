@@ -188,11 +188,13 @@ public class GridStorageCache implements IStorageGrid
 
 			for( IMEInventoryHandler<IAEItemStack> h : cc.getCellArray( StorageChannel.ITEMS ) )
 			{
+				if (this.myItemNetwork != null) this.myItemNetwork.removeNewStorage(h);
 				tracker.postChanges( StorageChannel.ITEMS, -1, h, actionSrc );
 			}
 
 			for( IMEInventoryHandler<IAEFluidStack> h : cc.getCellArray( StorageChannel.FLUIDS ) )
 			{
+				if (this.myFluidNetwork != null) this.myFluidNetwork.removeNewStorage(h);
 				tracker.postChanges( StorageChannel.FLUIDS, -1, h, actionSrc );
 			}
 		}
