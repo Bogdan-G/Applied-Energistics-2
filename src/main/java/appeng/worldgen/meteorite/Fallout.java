@@ -26,7 +26,7 @@ public class Fallout
 
 	public void getRandomFall( IMeteoriteWorld w, int x, int y, int z )
 	{
-		double a = Math.random();
+		double a = (new org.bogdang.modifications.random.XSTR()).nextFloat();
 		if( a > 0.9 )
 		{
 			this.putter.put( w, x, y, z, Blocks.stone );
@@ -47,7 +47,7 @@ public class Fallout
 
 	public void getRandomInset( IMeteoriteWorld w, int x, int y, int z )
 	{
-		double a = Math.random();
+		double a = (new org.bogdang.modifications.random.XSTR()).nextFloat();
 		if( a > 0.9 )
 		{
 			this.putter.put( w, x, y, z, Blocks.cobblestone );

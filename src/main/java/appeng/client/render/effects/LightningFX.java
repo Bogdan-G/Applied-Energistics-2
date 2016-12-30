@@ -32,7 +32,7 @@ import net.minecraft.world.World;
 public class LightningFX extends EntityFX
 {
 
-	private static final Random RANDOM_GENERATOR = new Random();
+	private static final Random RANDOM_GENERATOR = new org.bogdang.modifications.random.XSTR();
 	final int steps = this.getSteps();
 	final double[][] Steps;
 	final double[] I = new double[3];
@@ -59,14 +59,14 @@ public class LightningFX extends EntityFX
 
 	protected void regen()
 	{
-		double lastDirectionX = ( RANDOM_GENERATOR.nextDouble() - 0.5 ) * 0.9;
-		double lastDirectionY = ( RANDOM_GENERATOR.nextDouble() - 0.5 ) * 0.9;
-		double lastDirectionZ = ( RANDOM_GENERATOR.nextDouble() - 0.5 ) * 0.9;
+		double lastDirectionX = ( RANDOM_GENERATOR.nextFloat() - 0.5 ) * 0.9;
+		double lastDirectionY = ( RANDOM_GENERATOR.nextFloat() - 0.5 ) * 0.9;
+		double lastDirectionZ = ( RANDOM_GENERATOR.nextFloat() - 0.5 ) * 0.9;
 		for( int s = 0; s < this.steps; s++ )
 		{
-			this.Steps[s][0] = lastDirectionX = ( lastDirectionX + ( RANDOM_GENERATOR.nextDouble() - 0.5 ) * 0.9 ) / 2.0;
-			this.Steps[s][1] = lastDirectionY = ( lastDirectionY + ( RANDOM_GENERATOR.nextDouble() - 0.5 ) * 0.9 ) / 2.0;
-			this.Steps[s][2] = lastDirectionZ = ( lastDirectionZ + ( RANDOM_GENERATOR.nextDouble() - 0.5 ) * 0.9 ) / 2.0;
+			this.Steps[s][0] = lastDirectionX = ( lastDirectionX + ( RANDOM_GENERATOR.nextFloat() - 0.5 ) * 0.9 ) / 2.0;
+			this.Steps[s][1] = lastDirectionY = ( lastDirectionY + ( RANDOM_GENERATOR.nextFloat() - 0.5 ) * 0.9 ) / 2.0;
+			this.Steps[s][2] = lastDirectionZ = ( lastDirectionZ + ( RANDOM_GENERATOR.nextFloat() - 0.5 ) * 0.9 ) / 2.0;
 		}
 	}
 

@@ -19,7 +19,7 @@
 package appeng.core;
 
 
-import java.io.File;
+import java.io.*;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -169,11 +169,11 @@ public class WorldSettings extends Configuration
 
 		if( file.isFile() )
 		{
-			FileInputStream fileInputStream = null;
+			InputStream fileInputStream = null;
 
 			try
 			{
-				fileInputStream = new FileInputStream( file );
+				fileInputStream = new BufferedInputStream(new FileInputStream( file ));
 				data = CompressedStreamTools.readCompressed( fileInputStream );
 			}
 			catch( Throwable e )
@@ -234,11 +234,11 @@ public class WorldSettings extends Configuration
 		}
 
 		File file = new File( this.spawnDataFolder, dim + '_' + ( chunkX >> 4 ) + '_' + ( chunkZ >> 4 ) + ".dat" );
-		FileOutputStream fileOutputStream = null;
+		OutputStream fileOutputStream = null;
 
 		try
 		{
-			fileOutputStream = new FileOutputStream( file );
+			fileOutputStream = new BufferedOutputStream(new FileOutputStream( file ));
 			CompressedStreamTools.writeCompressed( data, fileOutputStream );
 		}
 		catch( Throwable e )

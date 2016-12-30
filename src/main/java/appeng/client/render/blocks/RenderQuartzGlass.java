@@ -44,7 +44,7 @@ public class RenderQuartzGlass extends BaseBlockRender
 		super( false, 0 );
 		if( offsets == null )
 		{
-			Random r = new Random( 924 );
+			Random r = new org.bogdang.modifications.random.XSTR( 924 );
 			offsets = new byte[10][10][10];
 			for( int x = 0; x < 10; x++ )
 			{

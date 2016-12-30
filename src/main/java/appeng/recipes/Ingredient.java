@@ -78,10 +78,10 @@ public class Ingredient implements IIngredient
 
 				if( this.nameSpace.equals( "oreDictionary" ) )
 				{
-					if( parts.length == 3 )
+					/*if( parts.length == 3 )//FindBugs: useless
 					{
 						throw new RecipeError( "Cannot specify meta when using ore dictionary." );
-					}
+					}*/
 					sel = OreDictionary.WILDCARD_VALUE;
 				}
 				else

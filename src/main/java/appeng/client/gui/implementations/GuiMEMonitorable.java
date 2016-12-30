@@ -226,7 +226,7 @@ public class GuiMEMonitorable extends AEBaseMEGui implements ISortSource, IConfi
 
 		boolean hasNEI = AppEng.instance.isIntegrationEnabled( IntegrationType.NEI );
 
-		int NEI = hasNEI ? 0 : 0;
+		int NEI = 0;//hasNEI ? 0 : 0;
 		int top = hasNEI ? 22 : 0;
 
 		int magicNumber = 114 + 1;

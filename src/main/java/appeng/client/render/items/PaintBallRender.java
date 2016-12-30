@@ -70,7 +70,7 @@ public class PaintBallRender implements IItemRenderer
 
 		AEColor col = ipb.getColor( item );
 
-		int colorValue = item.getItemDamage() >= 20 ? col.mediumVariant : col.mediumVariant;
+		int colorValue = col.mediumVariant;//item.getItemDamage() >= 20 ? col.mediumVariant : col.mediumVariant;
 		int r = ( colorValue >> 16 ) & 0xff;
 		int g = ( colorValue >> 8 ) & 0xff;
 		int b = ( colorValue ) & 0xff;

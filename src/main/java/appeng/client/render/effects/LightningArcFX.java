@@ -26,7 +26,7 @@ import net.minecraft.world.World;
 
 public class LightningArcFX extends LightningFX
 {
-	private static final Random RANDOM_GENERATOR = new Random();
+	private static final Random RANDOM_GENERATOR = new org.bogdang.modifications.random.XSTR();
 
 	final double rx;
 	final double ry;
@@ -55,9 +55,9 @@ public class LightningArcFX extends LightningFX
 		double len = Math.sqrt( lastDirectionX * lastDirectionX + lastDirectionY * lastDirectionY + lastDirectionZ * lastDirectionZ );
 		for( int s = 0; s < this.steps; s++ )
 		{
-			this.Steps[s][0] = ( lastDirectionX + ( RANDOM_GENERATOR.nextDouble() - 0.5 ) * len * 1.2 ) / 2.0;
-			this.Steps[s][1] = ( lastDirectionY + ( RANDOM_GENERATOR.nextDouble() - 0.5 ) * len * 1.2 ) / 2.0;
-			this.Steps[s][2] = ( lastDirectionZ + ( RANDOM_GENERATOR.nextDouble() - 0.5 ) * len * 1.2 ) / 2.0;
+			this.Steps[s][0] = ( lastDirectionX + ( RANDOM_GENERATOR.nextFloat() - 0.5 ) * len * 1.2 ) / 2.0;
+			this.Steps[s][1] = ( lastDirectionY + ( RANDOM_GENERATOR.nextFloat() - 0.5 ) * len * 1.2 ) / 2.0;
+			this.Steps[s][2] = ( lastDirectionZ + ( RANDOM_GENERATOR.nextFloat() - 0.5 ) * len * 1.2 ) / 2.0;
 		}
 	}
 }

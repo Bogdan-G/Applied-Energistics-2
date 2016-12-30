@@ -46,7 +46,7 @@ public class VibrantFX extends EntityFX
 		this.prevPosX = this.posX;
 		this.prevPosY = this.posY;
 		this.prevPosZ = this.posZ;
-		this.particleMaxAge = (int) ( 20.0D / ( Math.random() * 0.8D + 0.1D ) );
+		this.particleMaxAge = (int) ( 20.0D / ( (new org.bogdang.modifications.random.XSTR()).nextFloat() * 0.8D + 0.1D ) );
 		this.noClip = true;
 	}
 

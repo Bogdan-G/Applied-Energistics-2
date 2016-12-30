@@ -21,7 +21,7 @@ package appeng.recipes;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+import java.io.*;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -431,7 +431,7 @@ public class RecipeHandler implements IRecipeHandler
 		{
 			try
 			{
-				ZipOutputStream out = new ZipOutputStream( new FileOutputStream( "recipes.zip" ) );
+				ZipOutputStream out = new ZipOutputStream( new BufferedOutputStream(new FileOutputStream( "recipes.zip" )) );
 
 				HashMultimap<String, IWebsiteSerializer> combined = HashMultimap.create();
 

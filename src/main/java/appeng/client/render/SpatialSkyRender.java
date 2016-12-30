@@ -37,7 +37,7 @@ public class SpatialSkyRender extends IRenderHandler
 
 	private static final SpatialSkyRender INSTANCE = new SpatialSkyRender();
 
-	private final Random random = new Random();
+	private final Random random = new org.bogdang.modifications.random.XSTR();
 	private final int dspList;
 	private long cycle = 0;
 
@@ -168,7 +168,7 @@ public class SpatialSkyRender extends IRenderHandler
 				double d11 = Math.atan2( Math.sqrt( iX * iX + iZ * iZ ), iY );
 				double d12 = Math.sin( d11 );
 				double d13 = Math.cos( d11 );
-				double d14 = this.random.nextDouble() * Math.PI * 2.0D;
+				double d14 = this.random.nextFloat() * Math.PI * 2.0D;
 				double d15 = Math.sin( d14 );
 				double d16 = Math.cos( d14 );
 

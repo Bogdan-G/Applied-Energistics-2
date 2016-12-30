@@ -158,7 +158,7 @@ public class Platform
 	/*
 	 * random source, use it for item drop locations...
 	 */
-	private static final Random RANDOM_GENERATOR = new Random();
+	private static final Random RANDOM_GENERATOR = new org.bogdang.modifications.random.XSTR();
 	private static final WeakHashMap<World, EntityPlayer> FAKE_PLAYERS = new WeakHashMap<World, EntityPlayer>();
 	private static Field tagList;
 	private static Class playerInstance;
@@ -533,7 +533,7 @@ public class Platform
 					return ( (NBTTagLong) A ).func_150291_c() == ( (NBTTagLong) B ).func_150291_c();
 
 				case 8: // else if ( A instanceof NBTTagString )
-					return ( (NBTTagString) A ).func_150285_a_().equals( ( (NBTTagString) B ).func_150285_a_() ) || ( (NBTTagString) A ).func_150285_a_().equals( ( (NBTTagString) B ).func_150285_a_() );
+					return ( (NBTTagString) A ).func_150285_a_().equals( ( (NBTTagString) B ).func_150285_a_() );//duplicated?
 
 				case 6: // else if ( A instanceof NBTTagDouble )
 					return ( (NBTTagDouble) A ).func_150286_g() == ( (NBTTagDouble) B ).func_150286_g();

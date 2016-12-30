@@ -28,7 +28,7 @@ public class FalloutCopy extends Fallout
 	@Override
 	public void getRandomFall( IMeteoriteWorld w, int x, int y, int z )
 	{
-		double a = Math.random();
+		double a = (new org.bogdang.modifications.random.XSTR()).nextFloat();
 		if( a > SPECIFIED_BLOCK_THRESHOLD )
 		{
 			this.putter.put( w, x, y, z, this.block, this.meta );
@@ -47,7 +47,7 @@ public class FalloutCopy extends Fallout
 	@Override
 	public void getRandomInset( IMeteoriteWorld w, int x, int y, int z )
 	{
-		double a = Math.random();
+		double a = (new org.bogdang.modifications.random.XSTR()).nextFloat();
 		if( a > SPECIFIED_BLOCK_THRESHOLD )
 		{
 			this.putter.put( w, x, y, z, this.block, this.meta );

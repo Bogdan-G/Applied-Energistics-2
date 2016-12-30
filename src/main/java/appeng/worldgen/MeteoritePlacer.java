@@ -62,7 +62,7 @@ public final class MeteoritePlacer
 	private final IBlockDefinition skyChestDefinition;
 	private final IBlockDefinition skyStoneDefinition;
 	private final MeteoriteBlockPutter putter = new MeteoriteBlockPutter();
-	private double meteoriteSize = ( Math.random() * 6.0 ) + 2;
+	private double meteoriteSize = ( (new org.bogdang.modifications.random.XSTR()).nextFloat() * 6.0 ) + 2;
 	private double realCrater = this.meteoriteSize * 2 + 5;
 	private double squaredMeteoriteSize = this.meteoriteSize * this.meteoriteSize;
 	private double crater = this.realCrater * this.realCrater;
@@ -246,7 +246,7 @@ public final class MeteoritePlacer
 			{
 				InventoryAdaptor ap = InventoryAdaptor.getAdaptor( te, ForgeDirection.UP );
 
-				int primary = Math.max( 1, (int) ( Math.random() * 4 ) );
+				int primary = Math.max( 1, (int) ( (new org.bogdang.modifications.random.XSTR()).nextFloat() * 4 ) );
 
 				if( primary > 3 ) // in case math breaks...
 				{
@@ -262,13 +262,13 @@ public final class MeteoritePlacer
 					{
 						duplicate = false;
 
-						if( Math.random() > PRESSES_SPAWN_CHANCE )
+						if( (new org.bogdang.modifications.random.XSTR()).nextFloat() > PRESSES_SPAWN_CHANCE )
 						{
 							r = WorldSettings.getInstance().getNextOrderedValue( "presses" );
 						}
 						else
 						{
-							r = (int) ( Math.random() * 1000 );
+							r = (int) ( (new org.bogdang.modifications.random.XSTR()).nextFloat() * 1000 );
 						}
 
 						ItemStack toAdd = null;
@@ -318,13 +318,13 @@ public final class MeteoritePlacer
 					while( duplicate );
 				}
 
-				int secondary = Math.max( 1, (int) ( Math.random() * 3 ) );
+				int secondary = Math.max( 1, (int) ( (new org.bogdang.modifications.random.XSTR()).nextFloat() * 3 ) );
 				for( int zz = 0; zz < secondary; zz++ )
 				{
-					switch( (int) ( Math.random() * 1000 ) % 3 )
+					switch( (int) ( (new org.bogdang.modifications.random.XSTR()).nextFloat() * 1000 ) % 3 )
 					{
 						case 0:
-							final int amount = (int) ( ( Math.random() * SKYSTONE_SPAWN_LIMIT ) + 1 );
+							final int amount = (int) ( ( (new org.bogdang.modifications.random.XSTR()).nextFloat() * SKYSTONE_SPAWN_LIMIT ) + 1 );
 							for( ItemStack skyStoneStack : this.skyStoneDefinition.maybeStack( amount ).asSet() )
 							{
 								ap.addItems( skyStoneStack );
@@ -347,7 +347,7 @@ public final class MeteoritePlacer
 							if( nugget != null )
 							{
 								nugget = nugget.copy();
-								nugget.stackSize = (int) ( Math.random() * 12 ) + 1;
+								nugget.stackSize = (int) ( (new org.bogdang.modifications.random.XSTR()).nextFloat() * 12 ) + 1;
 								ap.addItems( nugget );
 							}
 							break;
@@ -400,10 +400,10 @@ public final class MeteoritePlacer
 							Block xf = w.getBlock( i, j - 1, k );
 							if( !xf.isReplaceable( w.getWorld(), i, j - 1, k ) )
 							{
-								double extraRange = Math.random() * 0.6;
+								double extraRange = (new org.bogdang.modifications.random.XSTR()).nextFloat() * 0.6;
 								double height = this.crater * ( extraRange + 0.2 ) - Math.abs( dist - this.crater * 1.7 );
 
-								if( xf != blk && height > 0 && Math.random() > 0.6 )
+								if( xf != blk && height > 0 && (new org.bogdang.modifications.random.XSTR()).nextFloat() > 0.6 )
 								{
 									randomShit++;
 									this.type.getRandomFall( w, i, j, k );
@@ -417,7 +417,7 @@ public final class MeteoritePlacer
 						Block blk_b = w.getBlock( i, j + 1, k );
 						if( blk_b == Platform.AIR )
 						{
-							if( Math.random() > 0.4 )
+							if( (new org.bogdang.modifications.random.XSTR()).nextFloat() > 0.4 )
 							{
 								double dx = i - x;
 								double dy = j - y;
@@ -469,7 +469,7 @@ public final class MeteoritePlacer
 		this.settings.setDouble( "sizeOfMeteorite", this.squaredMeteoriteSize );
 		this.settings.setDouble( "crater", this.crater );
 
-		this.settings.setBoolean( "lava", Math.random() > 0.9 );
+		this.settings.setBoolean( "lava", (new org.bogdang.modifications.random.XSTR()).nextFloat() > 0.9 );
 
 		if( blk == Blocks.sand )
 		{

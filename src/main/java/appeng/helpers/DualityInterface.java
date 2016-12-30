@@ -1237,7 +1237,7 @@ public class DualityInterface implements IGridTickable, IStorageMonitorable, IIn
 		}
 	}
 
-	private class InterfaceRequestSource extends MachineSource
+	private static class InterfaceRequestSource extends MachineSource
 	{
 
 		public InterfaceRequestSource( IActionHost v )
