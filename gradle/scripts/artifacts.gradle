@@ -1,4 +1,4 @@
-task myJavadocs(type: Javadoc) {
+/*task myJavadocs(type: Javadoc) {
     source = sourceSets.api.java
     include "appeng/api/**"
 
@@ -8,7 +8,7 @@ task myJavadocs(type: Javadoc) {
 task javadocJar(type: Jar, dependsOn: myJavadocs) {
     classifier = 'javadoc'
     from 'build/docs/javadoc/'
-}
+}*/
 
 task devJar(type: Jar) {
 
@@ -21,6 +21,7 @@ task devJar(type: Jar) {
         include "appeng/**"
         include "assets/**"
         include 'mcmod.info'
+        include "org/**"
     }
 
     classifier = 'dev'
@@ -39,5 +40,5 @@ task apiJar(type: Jar) {
 artifacts {
     archives devJar
     archives apiJar
-    archives javadocJar
+    //archives javadocJar
 }

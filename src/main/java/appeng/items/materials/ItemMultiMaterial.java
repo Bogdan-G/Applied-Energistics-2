@@ -179,6 +179,7 @@ public final class ItemMultiMaterial extends AEBaseItem implements IStorageCompo
 		
 		for( AEFeature f : mat.getFeature() )
 		{
+			if (f == AEFeature.QuantumNetworkBridge && (mat == MaterialType.EnderDust || mat == MaterialType.Singularity || mat == MaterialType.QESingularity)) continue;
 			enabled = enabled && AEConfig.instance.isFeatureEnabled( f );
 		}
 

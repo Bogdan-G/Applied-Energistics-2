@@ -115,7 +115,9 @@ public class TileCondenser extends AEBaseInvTile implements IFluidHandler, IConf
 	private boolean canAddOutput( ItemStack output )
 	{
 		ItemStack outputStack = this.getStackInSlot( 1 );
-		return outputStack == null || ( Platform.isSameItem( outputStack, output ) && outputStack.stackSize < outputStack.getMaxStackSize() );
+		if (outputStack == null) return true;
+		else if (outputStack.getItem() == null) {this.setInventorySlotContents(1, null);return true;}
+		else return ( Platform.isSameItem( outputStack, output ) && outputStack.stackSize < outputStack.getMaxStackSize() );
 	}
 
 	/**
