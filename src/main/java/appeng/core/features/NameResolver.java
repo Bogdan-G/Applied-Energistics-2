@@ -33,7 +33,7 @@ import appeng.items.AEBaseItem;
  * @deprecated only a temporary solution for a rename
  */
 @Deprecated
-public final class NameResolver
+public final class NameResolver implements java.io.Serializable
 {
 	private static final Pattern ITEM_MULTI_PART = Pattern.compile( "ItemMultiPart", Pattern.LITERAL );
 	private static final Pattern ITEM_MULTI_MATERIAL = Pattern.compile( "ItemMultiMaterial", Pattern.LITERAL );

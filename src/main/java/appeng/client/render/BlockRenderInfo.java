@@ -26,7 +26,7 @@ import appeng.client.texture.FlippableIcon;
 import appeng.client.texture.TmpFlippableIcon;
 
 
-public class BlockRenderInfo
+public class BlockRenderInfo implements java.io.Serializable
 {
 
 	public final BaseBlockRender rendererInstance;

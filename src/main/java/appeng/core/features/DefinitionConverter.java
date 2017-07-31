@@ -20,7 +20,7 @@ import appeng.api.util.AEItemDefinition;
  * @deprecated
  */
 @Deprecated
-public final class DefinitionConverter
+public final class DefinitionConverter implements java.io.Serializable
 {
 	public AEItemDefinition of( ITileDefinition definition )
 	{

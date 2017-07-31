@@ -53,7 +53,7 @@ import net.minecraft.item.ItemStack;
  * </code>
  * </pre>
  */
-public interface IPartItem
+public interface IPartItem extends java.io.Serializable
 {
 
 	/**

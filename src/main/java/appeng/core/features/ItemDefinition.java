@@ -32,7 +32,7 @@ import appeng.api.definitions.IItemDefinition;
 import appeng.util.Platform;
 
 
-public class ItemDefinition implements IItemDefinition
+public class ItemDefinition implements IItemDefinition, java.io.Serializable
 {
 	@Nonnull
 	private final Item item;

@@ -25,7 +25,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 
-public class OffsetIcon implements IIcon
+public class OffsetIcon implements IIcon, java.io.Serializable
 {
 
 	final float offsetX;

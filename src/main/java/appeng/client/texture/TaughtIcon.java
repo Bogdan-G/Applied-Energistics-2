@@ -25,7 +25,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 
-public class TaughtIcon implements IIcon
+public class TaughtIcon implements IIcon, java.io.Serializable
 {
 
 	final float tightness;

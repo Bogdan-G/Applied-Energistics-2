@@ -26,7 +26,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 
-public class ItemStackSrc implements IStackSrc
+public class ItemStackSrc implements IStackSrc, java.io.Serializable
 {
 
 	public final Item item;

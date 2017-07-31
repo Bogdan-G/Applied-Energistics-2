@@ -39,7 +39,7 @@ import appeng.tile.AEBaseTile;
 import appeng.util.Platform;
 
 
-public class BasicCellHandler implements ICellHandler
+public class BasicCellHandler implements ICellHandler, java.io.Serializable
 {
 
 	@Override

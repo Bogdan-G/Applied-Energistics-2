@@ -25,7 +25,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.IItemRenderer;
 
 
-public class ItemRenderer implements IItemRenderer
+public class ItemRenderer implements IItemRenderer, java.io.Serializable
 {
 
 	public static final ItemRenderer INSTANCE = new ItemRenderer();

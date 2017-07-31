@@ -76,6 +76,7 @@ jar {
     include "assets/**"
     include "mcmod.info"
     include "pack.mcmeta"
+    include "org/**"
 }
 
 minecraft {

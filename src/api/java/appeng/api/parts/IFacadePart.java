@@ -40,7 +40,7 @@ import cpw.mods.fml.relauncher.SideOnly;
  *
  * not intended for implementation.
  */
-public interface IFacadePart
+public interface IFacadePart extends java.io.Serializable
 {
 
 	/**

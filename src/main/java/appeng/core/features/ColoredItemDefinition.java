@@ -28,7 +28,7 @@ import appeng.api.util.AEColor;
 import appeng.api.util.AEColoredItemDefinition;
 
 
-public final class ColoredItemDefinition implements AEColoredItemDefinition
+public final class ColoredItemDefinition implements AEColoredItemDefinition, java.io.Serializable
 {
 
 	final ItemStackSrc[] colors = new ItemStackSrc[17];

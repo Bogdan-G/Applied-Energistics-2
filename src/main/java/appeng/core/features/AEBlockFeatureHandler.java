@@ -32,7 +32,7 @@ import appeng.core.CreativeTab;
 import appeng.util.Platform;
 
 
-public final class AEBlockFeatureHandler implements IFeatureHandler
+public final class AEBlockFeatureHandler implements IFeatureHandler, java.io.Serializable
 {
 	private final AEBaseBlock featured;
 	private final FeatureNameExtractor extractor;

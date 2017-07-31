@@ -31,7 +31,7 @@ import com.google.common.base.Preconditions;
 import appeng.api.definitions.IItemDefinition;
 
 
-public final class DamagedItemDefinition implements IItemDefinition
+public final class DamagedItemDefinition implements IItemDefinition, java.io.Serializable
 {
 	private final IStackSrc source;
 

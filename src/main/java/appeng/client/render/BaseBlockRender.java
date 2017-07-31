@@ -54,7 +54,7 @@ import appeng.util.Platform;
 
 
 @SideOnly( Side.CLIENT )
-public class BaseBlockRender
+public class BaseBlockRender implements java.io.Serializable
 {
 	private static final int ORIENTATION_BITS = 7;
 	private static final int FLIP_H_BIT = 8;
@@ -63,7 +63,7 @@ public class BaseBlockRender
 
 	private final boolean hasTESR;
 	private final double renderDistance;
-	private final FloatBuffer rotMat = BufferUtils.createFloatBuffer( 16 );
+	private transient final FloatBuffer rotMat = BufferUtils.createFloatBuffer( 16 );
 
 	public BaseBlockRender()
 	{

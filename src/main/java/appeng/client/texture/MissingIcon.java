@@ -28,7 +28,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 
-public class MissingIcon implements IIcon
+public class MissingIcon implements IIcon, java.io.Serializable
 {
 
 	final boolean isBlock;

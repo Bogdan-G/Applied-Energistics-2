@@ -24,7 +24,7 @@
 package appeng.api.parts;
 
 
-public interface IBoxProvider
+public interface IBoxProvider extends java.io.Serializable
 {
 
 	/**

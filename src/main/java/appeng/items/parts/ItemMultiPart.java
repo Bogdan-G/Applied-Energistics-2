@@ -352,7 +352,7 @@ public final class ItemMultiPart extends AEBaseItem implements IPartItem, IItemG
 		return null;
 	}
 
-	private static final class PartTypeWithVariant
+	private static final class PartTypeWithVariant implements java.io.Serializable
 	{
 		private final PartType part;
 		private final int variant;

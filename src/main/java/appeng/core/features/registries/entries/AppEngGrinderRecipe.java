@@ -24,7 +24,7 @@ import net.minecraft.item.ItemStack;
 import appeng.api.features.IGrinderEntry;
 
 
-public class AppEngGrinderRecipe implements IGrinderEntry
+public class AppEngGrinderRecipe implements IGrinderEntry, java.io.Serializable
 {
 
 	private ItemStack in;

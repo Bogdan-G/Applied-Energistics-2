@@ -37,7 +37,7 @@ import appeng.tile.AEBaseTile;
 import appeng.util.Platform;
 
 
-public class CreativeCellHandler implements ICellHandler
+public class CreativeCellHandler implements ICellHandler, java.io.Serializable
 {
 
 	@Override

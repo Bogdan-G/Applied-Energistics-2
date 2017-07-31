@@ -35,7 +35,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 
-public interface IPartRenderHelper
+public interface IPartRenderHelper extends java.io.Serializable
 {
 
 	/**

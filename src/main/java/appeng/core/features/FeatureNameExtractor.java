@@ -24,7 +24,7 @@ import java.util.regex.Pattern;
 import com.google.common.base.Optional;
 
 
-public class FeatureNameExtractor
+public class FeatureNameExtractor implements java.io.Serializable
 {
 	private static final Pattern PATTERN_ITEM_MULTI_PART = Pattern.compile( "ItemMultiPart", Pattern.LITERAL );
 	private static final Pattern PATTERN_ITEM_MULTI_MATERIAL = Pattern.compile( "ItemMultiMaterial", Pattern.LITERAL );

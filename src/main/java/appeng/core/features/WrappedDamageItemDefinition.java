@@ -33,7 +33,7 @@ import com.google.common.base.Preconditions;
 import appeng.api.definitions.ITileDefinition;
 
 
-public final class WrappedDamageItemDefinition implements ITileDefinition
+public final class WrappedDamageItemDefinition implements ITileDefinition, java.io.Serializable
 {
 	private final ITileDefinition definition;
 	private final int damage;

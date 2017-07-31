@@ -41,7 +41,7 @@ import appeng.util.ReadableNumberConverter;
  * @version rv2
  * @since rv0
  */
-public class AppEngRenderItem extends RenderItem
+public class AppEngRenderItem extends RenderItem implements java.io.Serializable
 {
 	private static final ISlimReadableNumberConverter SLIM_CONVERTER = ReadableNumberConverter.INSTANCE;
 	private static final IWideReadableNumberConverter WIDE_CONVERTER = ReadableNumberConverter.INSTANCE;

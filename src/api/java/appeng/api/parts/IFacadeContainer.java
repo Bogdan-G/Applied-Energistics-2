@@ -37,7 +37,7 @@ import net.minecraftforge.common.util.ForgeDirection;
  *
  * not intended for implementation.
  */
-public interface IFacadeContainer
+public interface IFacadeContainer extends java.io.Serializable
 {
 
 	/**

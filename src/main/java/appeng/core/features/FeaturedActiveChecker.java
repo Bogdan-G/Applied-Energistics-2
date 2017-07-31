@@ -24,7 +24,7 @@ import java.util.Set;
 import appeng.core.AEConfig;
 
 
-public final class FeaturedActiveChecker
+public final class FeaturedActiveChecker implements java.io.Serializable
 {
 	private final Set<AEFeature> features;
 

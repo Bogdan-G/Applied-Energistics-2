@@ -33,7 +33,7 @@ import appeng.core.CreativeTabFacade;
 import appeng.items.parts.ItemFacade;
 
 
-public final class ItemFeatureHandler implements IFeatureHandler
+public final class ItemFeatureHandler implements IFeatureHandler, java.io.Serializable
 {
 	private final Item item;
 	private final FeatureNameExtractor extractor;

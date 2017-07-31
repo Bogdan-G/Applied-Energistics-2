@@ -22,7 +22,7 @@ package appeng.client.texture;
 import net.minecraft.util.IIcon;
 
 
-public class FlippableIcon implements IIcon
+public class FlippableIcon implements IIcon, java.io.Serializable
 {
 
 	protected IIcon original;

@@ -31,7 +31,7 @@ import appeng.api.definitions.IBlockDefinition;
 import appeng.core.CreativeTab;
 
 
-public class StairBlockFeatureHandler implements IFeatureHandler
+public class StairBlockFeatureHandler implements IFeatureHandler, java.io.Serializable
 {
 	private final BlockStairs stairs;
 	private final FeatureNameExtractor extractor;
